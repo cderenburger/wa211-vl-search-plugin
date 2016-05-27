@@ -74,6 +74,7 @@ class Win211_Search_Plugin_Public {
 		 */
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/win211-search-plugin-public.css', array(), $this->version, 'all' );
+		
 
 	}
 
@@ -97,7 +98,11 @@ class Win211_Search_Plugin_Public {
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/win211-search-plugin-public.js', array( 'jquery' ), $this->version, false );
-
+		wp_enqueue_script( 'jquery-ui-autocomplete' );
+		/* wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . '/php/demo_cities.php', array( 'jquery'), $this->version, false ); */
+		wp_enqueue_script('pluginurl', plugin_dir_url('','win211-search-plugin') . 'win211-search-plugin/public/php/demo_cities.php');
+		wp_localize_script('pluginurl', 'pluginUrl', array( 'pluginsUrl' => plugins_url(),
+)); 
 	}
 
 }
