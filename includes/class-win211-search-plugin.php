@@ -118,6 +118,8 @@ class Win211_Search_Plugin {
 		 * side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-win211-search-plugin-public.php';
+		
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/php/win211_shortcode.php' ;
 
 		$this->loader = new Win211_Search_Plugin_Loader();
 
