@@ -36,15 +36,17 @@ $(document).ready(function(){
 		select: function(event, ui){
 			$("#city").val(ui.item.city);
 			$("#geocoor").val(ui.item.geocoor);
+			$("#region").val(ui.item.region);
 			var location =  $("#city").val();
 			var geocoor = $("#geocoor").val();
+			var region = $("#region").val();
 			var domain = "www.resourcehouse.com/win211" ;
 			var geoloc = "&loc=";
 			var amp = "&".replace(/#038;/g,"");
 		console.log(location);
 			$("a[href^='https://www.resourcehouse.info/win211/Search?']").not("a[href^='https://www.resourcehouse.info/win211/CHANGEME']")
 			.each(function(){
-			this.href = "https://www.resourcehouse.info/win211/Search?" + $(this).attr('data-relativeurl')+amp+"loc="+location+amp+"geo="+geocoor;
+			this.href = "https://www.resourcehouse.info/win211/Search?" + $(this).attr('data-relativeurl')+amp+"loc="+location+amp+"geo="+geocoor+amp+"reg="+region;
 			});
 		},
 		minLength:1
