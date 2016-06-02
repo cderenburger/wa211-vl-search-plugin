@@ -7,7 +7,7 @@
 	$safekeyword = preg_replace("/ /","+",$safekeyword);
 	//$sendkeyword = "*".$safekeyword."*";
 	//analytics.js: __gaTracker('send', 'event', 'keywordsearch', 'taxname');
-	$url = "https://www.minnesotahelp.info/Search?q=".$safekeyword."&loc=".$location."&geo=".$geocoor ;
+	$url = "https://www.resourcehouse.info/win211/Search?q=".$safekeyword."&loc=".$location."&geo=".$geocoor ;
 		while (ob_get_status()) 
 		{
 		    ob_end_clean();

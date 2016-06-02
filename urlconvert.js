@@ -11,9 +11,9 @@ var domain = "www.resourcehouse.com/win211"
 var geoloc = "&loc="
 var amp = "&".replace(/#038;/g,"")
 console.log(location);
-jQuery("a[href^='https://www.minnesotahelp.info/Search?']").not("a[href^='https://www.minnesotahelp.info/CHANGEME']")
+jQuery("a[href^='https://www.resourcehouse.info/win211/Search?']").not("a[href^='https://www.resourcehouse.info/win211/CHANGEME']")
 .each(function(){
-this.href = "https://www.minnesotahelp.info/Search?" + jQuery(this).attr('data-relativeurl')+amp+"loc="+location+amp+"geo="+geocoor;
+this.href = "https://www.resourcehouse.info/win211/Search?" + jQuery(this).attr('data-relativeurl')+amp+"loc="+location+amp+"geo="+geocoor;
 })
 		},
 		minLength:1
