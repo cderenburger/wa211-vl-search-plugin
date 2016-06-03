@@ -29,6 +29,8 @@ add_shortcode( 'win211search', 'win211search_shortcode' ); */
 					 <input type="text" name="city" id="city" value="" /></p>
 				 <p><label for="geocoor">Geocoordinates</label><br />
 					 <input type="text" name="geocoor" id="geocoor" value="" /></p>
+				 <p><label for="region">Region</label> <br />
+				 	<input type="text" name="region" id="region" value=""/></p>
 			<input type="submit" value="Search" id="search">
 			</form>
 			
