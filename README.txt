@@ -32,6 +32,43 @@ The plugin offers the following features:
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 
+== Creating Links ==
+
+There are two type of links commonly used for resource searches, Keyword and Taxonomy.  Keyword searches are performed by Solr
+which will search based on default settings set by the site administrator.  Settings described in the next section.
+
+Keyword Links
+The site uses the following url structure to query the database based on the user's entered keyword(s)
+
+     https://www.resourcehouse.info/win211/Search?q={KEYWORDS}
+     
+Above is the minimum required to create a working link.  A single keyword or series of keywords are placed in the {keyword}
+section and the site can perform a search.
+
+Taxonomy Searches
+The site can also perform more specific searches based on the AIRS Taxonomy.  Use the taxonomy code in the following url format
+
+    https://www.resourcehouse.info/win211/Search/Topics/{TAXONOMY_CODE}
+
+
+
+== Solr Settings ==
+As of this writing these settings in Washington are as follows: 
+1. Query Parser - Extended Dismax
+1. Phrase Slop: 1
+1. Multi-Term Match: 2
+1. Search Fields: Provider Name, AKA Names, Service Name, Location Name, Taxonomy Terms (topic), Taxonomy Terms (target), 
+   Address (city), Address (zip), Taxonomy Synonyms
+   a. Not included are: Service Description, Location Description, Address (street), County, Service Keywords, Features
+1. Distance Boost: 20 (tiered)
+1. Distance Spread: 5
+1. Name Boost: 0
+1. Topic Boost: 1
+1. Term Proximity Boost: 1
+1. Term Proximity Distance: 2
+1. Auto Radius Threshold: 0
+1. Use Service Priority: Yes
+
 == Frequently Asked Questions ==
 
 = A question that someone might have =
