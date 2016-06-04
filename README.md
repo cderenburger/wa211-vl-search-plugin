@@ -29,7 +29,7 @@ The plugin offers the following features:
 
 To add a basic search form to your Wordpress based site add the following shortcode to a page or post.
 
-```[win211search]```
+`[win211search]`
      
 This will create a basic form where a user can enter a keyword search, set their location, and a search button to initiate the search.
 
@@ -57,7 +57,7 @@ The ```data-relativeurl=``` restates the keyword search.  When a location is sel
 ###### Feature Filters
 The above example can be extended to include Feature Filters. Filters can be used to further narrow down a list of search results by filtered critera.  In the above example for 'Dental Care' we could also add to the search parameters the requirement that the results list return services which also accept a particular form of payment, for example 'WA Apple Health (Medicaid)'.  A feature is added to the url by adding:
 
- ```f={FEATURE_CATEGORY}%3d{FEATURE_CODE}```
+`f={FEATURE_CATEGORY}%3d{FEATURE_CODE}`
 
 To select appropriate feature codes and obtain the needed parameters perform the keyword search on the website.  On the search results page a list of filters will be offered in the left sidebar which apply to the current search.  Select a filter from the list.  From the url bar on the resulting search page copy the url segment ```&f=[...]``` up to the following ```&```.  Paste this filter code into both the ```url``` and ```data-relativeurl``` sections of your link.  
 
