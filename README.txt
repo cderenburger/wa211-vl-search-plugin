@@ -27,29 +27,86 @@ The plugin offers the following features:
 == Installation ==
 
 1. Download 'win211-search-plugin.zip' from https://github.com/cderenburger/win211-search-plugin
-1. From the Plugins menu in your Wordpress Admin area select 'Add New' and press the 'Upload Plugin' button and upload the .zip
+2. From the Plugins menu in your Wordpress Admin area select 'Add New' and press the 'Upload Plugin' button and upload the .zip
    a. Alternately extract and upload 'win211-search-plugin' folder to the '/wp-content/plugins' directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
+3. Activate the plugin through the 'Plugins' menu in WordPress
 
+
+== Usage ==
+
+Adding A Search Form To A Website
+To add a basic search form to your Wordpress based site add the following shortcode to a page or post.
+
+[win211search]
+
+This will create a basic form where a user can enter a keyword search, set their location, and a search button to initiate 
+the search.
 
 == Creating Links ==
 
-There are two type of links commonly used for resource searches, Keyword and Taxonomy.  Keyword searches are performed by Solr
-which will search based on default settings set by the site administrator.  Settings described in the next section.
+There are two type of links commonly used for resource searches, Keyword and Taxonomy. Keyword searches are performed by Solr 
+which will search based on default settings set by the site administrator. Settings described in the Solr section.
 
-Keyword Links
-The site uses the following url structure to query the database based on the user's entered keyword(s)
+== Keyword Links ==
 
-     https://www.resourcehouse.info/win211/Search?q={KEYWORDS}
-     
-Above is the minimum required to create a working link.  A single keyword or series of keywords are placed in the {keyword}
+Resource House uses the following url structure to query the database based on the user's entered keyword(s)
+
+    https://www.resourcehouse.info/win211/Search?q={KEYWORDS}
+
+Above is the minimum required to create a working link. A single keyword or series of keywords are placed in the {keyword} 
 section and the site can perform a search.
 
-Taxonomy Searches
-The site can also perform more specific searches based on the AIRS Taxonomy.  Use the taxonomy code in the following url format
+The above example does not require this plugin to operate. The results of this search will search for the specified 
+keyword(s) statewide.
 
-    https://www.resourcehouse.info/win211/Search/Topics/{TAXONOMY_CODE}
+The following link example is the expected format, requires use of this plugin, and will allow a user to enter their search 
+location.
 
+<a href="https://www.resourcehouse.info/win211/Search?q=Dental+Care" target="_blank" 
+data-relativeurl="q=Dental+Care">Dental Care</a>
+
+The [data-relativeurl=] restates the keyword search. When a location is selected in the [win211search] location form this 
+plugin reassembles the url with consisting of the city and zipcode, geocoordinates, county, and the data-relavtiveurl=.
+
+-- Feature Filters --
+
+The above examples can be extended to include Feature Filters. Filters can be used to further narrow down a list of search 
+results by filtered critera. In the above example for 'Dental Care' we could also add to the search parameters the requirement 
+that the results list return services which also accept a particular form of payment, for example 'WA Apple Health (Medicaid)'. 
+A feature is added to the url by adding:
+
+     f={FEATURE_CATEGORY}%3d{FEATURE_CODE}
+
+To select appropriate feature codes and obtain the needed parameters perform the search on the website. On the search 
+results page a list of filters will be offered in the left sidebar which apply to the current search. Select a filter from the 
+list. From the url bar on the resulting search page copy the url segment &f=[...] up to the following &. Paste this filter code 
+into both the url and data-relativeurl sections of your link.
+
+Below is an example of a search for Dental Care with the Feature WA Apple Health (Medicaid).
+
+     <a href="https://www.resourcehouse.info/win211/Search?q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)" 
+     target="blank" data-relativeurl="q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">
+        Dental Services which accept WA Apple Health for Adults
+     </a>
+
+== Taxonomy Searches ==
+
+The site can also perform more specific searches based on the AIRS Taxonomy. Use the taxonomy code in the following url format
+
+https://www.resourcehouse.info/win211/Search/Topics/{TAXONOMY_CODE}/{TAXONOMY_NAME}
+Taxonomy links require the Taxonomy Name following the Taxonomy Code. The link can most easily be obtained by visiting 
+https://www.resourcehouse.info/win211/Topics and drilling down or by visiting 
+https://www.resourcehouse.info/win211/Topics/{TAXONOMY_CODE} and copying the specified url from the Topic List.
+
+NOTE: Any page containing keyword or taxonomy links requires the inclusion of the [win211search] shortcode. This shortcode 
+displays forms required to set the user's specified city, zipcode, and county region. When a user selects a location the keyword 
+or taxonomy links will be automatically updated with the selected location information. This shortcode is not required if you 
+are simply linking to http://win211.org or https://www.resourcehouse.info/win211/Index
+
+-- Features Filters --
+
+As in the keyword section features filters can also be added to taxonomy searches.  Simply include the '&f=[...] as above in
+both the url and data-relativeurl sections.
 
 
 == Solr Settings ==
@@ -68,34 +125,3 @@ As of this writing these settings in Washington are as follows:
 1. Term Proximity Distance: 2
 1. Auto Radius Threshold: 0
 1. Use Service Priority: Yes
-
-== Frequently Asked Questions ==
-
-= A question that someone might have =
-
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
-
-== Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
-
-== Changelog ==
-
-
-= 0.3 =
-* Shortcode functionality added to plugin
-
-= 0.2 =
-* Build url code added and edited, plugin now functioning
-
-= 0.1 =
-* Repository initiated, Minnesotahelp.info code rolled in to plugin
-
