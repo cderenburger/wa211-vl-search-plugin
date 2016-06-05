@@ -147,7 +147,7 @@ See [Contributors](https://github.com/cderenburger/win211-search-plugin/graphs/c
 
 ## License
 
-Github Changelog Generator is released under the [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html).
+Released under the [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html).
 
 ## Donate
 You can donate to this project and WIN211 by visiting http://win211.org/about/donate/
