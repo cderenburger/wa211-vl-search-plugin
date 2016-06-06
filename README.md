@@ -38,7 +38,7 @@ This will create a basic form where a user can enter a keyword search, set their
 
 There are two type of links commonly used for resource searches, Keyword and Taxonomy.  Keyword searches are performed by Solr which will search based on default settings set by the site administrator.  Settings described in the Solr section.
 
-##### Keyword Links
+#### Keyword Links
 Resource House uses the following url structure to query the database based on the user's entered keyword(s)
 
      https://www.resourcehouse.info/win211/Search?q={KEYWORDS}
@@ -54,20 +54,9 @@ The following link example is the expected format, requires use of this plugin, 
     
 The ```data-relativeurl=``` restates the keyword search.  When a location is selected in the ```[win211search]``` location form this plugin reassembles the url with consisting of the city and zipcode, geocoordinates, county, and the ```data-relavtiveurl=```. 
 
-###### Feature Filters
-The above example can be extended to include Feature Filters. Filters can be used to further narrow down a list of search results by filtered critera.  In the above example for 'Dental Care' we could also add to the search parameters the requirement that the results list return services which also accept a particular form of payment, for example 'WA Apple Health (Medicaid)'.  A feature is added to the url by adding:
+Additional paramaters can also be applied to searches.  Examples given in the Feature Filters section.
 
-`f={FEATURE_CATEGORY}%3d{FEATURE_CODE}`
-
-To select appropriate feature codes and obtain the needed parameters perform the keyword search on the website.  On the search results page a list of filters will be offered in the left sidebar which apply to the current search.  Select a filter from the list.  From the url bar on the resulting search page copy the url segment ```&f=[...]``` up to the following ```&```.  Paste this filter code into both the ```url``` and ```data-relativeurl``` sections of your link.  
-
-Below is an example of a search for Dental Care with the Feature WA Apple Health (Medicaid).
-
-    <a href="https://www.resourcehouse.info/win211/Search?q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)" target="blank" 
-    data-relativeurl="q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">
-    Dental Services which accept WA Apple Health for Adults</a>
-
-##### Taxonomy Searches
+#### Taxonomy Searches
 The site can also perform more specific searches based on the AIRS Taxonomy.  Use the taxonomy code in the following url format
 
     https://www.resourcehouse.info/win211/Search/Topics/{TAXONOMY_CODE}/{TAXONOMY_NAME}
@@ -79,10 +68,20 @@ https://www.resourcehouse.info/win211/Topics/{TAXONOMY_CODE} and copying the spe
 > **NOTE:**
 >*Any page containing keyword or taxonomy links requires the inclusion of the [win211search] shortcode.  This shortcode displays forms required to set the user's specified city, zipcode, and county region.  When a user selects a location the keyword or taxonomy links will be automatically updated with the selected location information.  This shortcode is not required if you are simply linking to http://win211.org or https://www.resourcehouse.info/win211/Index*
 
-###### Feature Filters
-As in the keyword section features filters can also be added to taxonomy searches.  Simply include the '&f=[...] as above in both the url and data-relativeurl sections.
+##### Feature Filters
+The above example can be extended to include Feature Filters. Filters can be used to further narrow down a list of search results by filtered critera.  In the above example for 'Dental Care' we could also add to the search parameters the requirement that the results list return services which also accept a particular form of payment, for example 'WA Apple Health (Medicaid)'.  A feature is added to the url by adding:
 
-### Solr Settings
+`f={FEATURE_CATEGORY}%3d{FEATURE_CODE}`
+
+To select appropriate feature codes and obtain the needed parameters perform the keyword search on the website.  On the search results page a list of filters will be offered in the left sidebar which apply to the current search.  Select a filter from the list.  From the url bar on the resulting search page copy the url segment ```&f=[...]``` up to the following ```&```.  Paste this filter code into both the ```url``` and ```data-relativeurl``` sections of your link.  
+
+Below is an example of a search for Dental Care with the Feature WA Apple Health (Medicaid).
+
+    <a href="https://www.resourcehouse.info/win211/Search?q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)" target="blank" 
+    data-relativeurl="q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">
+    Dental Services which accept WA Apple Health for Adults</a>
+    
+#### Solr Settings
 As of this writing these settings in Washington are as follows: 
 
 1. **Query Parser:** Extended Dismax
