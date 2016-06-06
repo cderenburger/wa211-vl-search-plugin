@@ -38,7 +38,7 @@ This will create a basic form where a user can enter a keyword search, set their
 
 There are two type of links commonly used for resource searches, Keyword and Taxonomy.  Keyword searches are performed by Solr which will search based on default settings set by the site administrator.  Settings described in the Solr section.
 
-##### Keyword Links
+#### Keyword Links
 Resource House uses the following url structure to query the database based on the user's entered keyword(s)
 
      https://www.resourcehouse.info/win211/Search?q={KEYWORDS}
@@ -54,8 +54,22 @@ The following link example is the expected format, requires use of this plugin, 
     
 The ```data-relativeurl=``` restates the keyword search.  When a location is selected in the ```[win211search]``` location form this plugin reassembles the url with consisting of the city and zipcode, geocoordinates, county, and the ```data-relavtiveurl=```. 
 
-###### Feature Filters
-The above example can be extended to include Feature Filters. Filters can be used to further narrow down a list of search results by filtered critera.  In the above example for 'Dental Care' we could also add to the search parameters the requirement that the results list return services which also accept a particular form of payment, for example 'WA Apple Health (Medicaid)'.  A feature is added to the url by adding:
+Additional parameters can also be applied to searches.  Examples given in the Feature Filters section.
+
+#### Taxonomy Searches
+The site can also perform more specific searches based on the AIRS Taxonomy.  Use the taxonomy code in the following url format
+
+    https://www.resourcehouse.info/win211/Search/Topics/{TAXONOMY_CODE}/{TAXONOMY_NAME}
+    
+Taxonomy links require the Taxonomy Name following the Taxonomy Code.  The link can most easily be obtained by visiting 
+https://www.resourcehouse.info/win211/Topics and drilling down or by visiting 
+https://www.resourcehouse.info/win211/Topics/{TAXONOMY_CODE} and copying the specified url from the Topic List.
+
+> **NOTE:**
+>*Any page containing keyword or taxonomy links requires the inclusion of the [win211search] shortcode.  This shortcode displays forms required to set the user's specified city, zipcode, and county region.  When a user selects a location the keyword or taxonomy links will be automatically updated with the selected location information.  This shortcode is not required if you are simply linking to http://win211.org or https://www.resourcehouse.info/win211/Index*
+
+##### Feature Filters
+The above example can be extended to include Feature Filters. Filters can be used to further narrow down a list of search results by filtered criteria.  In the above example for 'Dental Care' we could also add to the search parameters the requirement that the results list return services which also accept a particular form of payment, for example 'WA Apple Health (Medicaid)'.  A feature is added to the url by adding:
 
 `f={FEATURE_CATEGORY}%3d{FEATURE_CODE}`
 
@@ -66,23 +80,8 @@ Below is an example of a search for Dental Care with the Feature WA Apple Health
     <a href="https://www.resourcehouse.info/win211/Search?q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)" target="blank" 
     data-relativeurl="q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">
     Dental Services which accept WA Apple Health for Adults</a>
-
-##### Taxonomy Searches
-The site can also perform more specific searches based on the AIRS Taxonomy.  Use the taxonomy code in the following url format
-
-    https://www.resourcehouse.info/win211/Search/Topics/{TAXONOMY_CODE}/{TAXONOMY_NAME}
     
-Taxonomy links require the Taxonomy Name following the Taxonomy Code.  The link can most easily be obtained by visiting
-https://www.resourcehouse.info/win211/Topics and drilling down or by visiting 
-https://www.resourcehouse.info/win211/Topics/{TAXONOMY_CODE} and copying the specified url from the Topic List.
-
-> **NOTE:**
->*Any page containing keyword or taxonomy links requires the inclusion of the [win211search] shortcode.  This shortcode displays forms required to set the user's specified city, zipcode, and county region.  When a user selects a location the keyword or taxonomy links will be automatically updated with the selected location information.  This shortcode is not required if you are simply linking to http://win211.org or https://www.resourcehouse.info/win211/Index*
-
-###### Feature Filters
-As in the keyword section features filters can also be added to taxonomy searches.  Simply include the '&f=[...] as above in both the url and data-relativeurl sections.
-
-### Solr Settings
+#### Solr Settings
 As of this writing these settings in Washington are as follows: 
 
 1. **Query Parser:** Extended Dismax
@@ -104,7 +103,7 @@ As of this writing these settings in Washington are as follows:
 ### [0.6] - 2016-06-04
 #### Added
  * Added documentation for creating links for both keyword and taxonomy searches
- * Added documention on adding features and needed liunk structures
+ * Added documentation on adding features and needed link structures
 
 #### Updated
  - Updated README.txt and README.md
@@ -120,7 +119,7 @@ As of this writing these settings in Washington are as follows:
 
 #### Changed
  * Updated code to reflect the new resourcehouse.info/win211 domain
- * Removed Minnesota Loactions from autocomplete
+ * Removed Minnesota Locations from autocomplete
 
 ### [0.3] - 2016-05-28
 #### Added
