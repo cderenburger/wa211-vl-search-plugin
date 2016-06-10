@@ -1,10 +1,9 @@
 === Plugin Name ===
 Contributors: (cderenburger)
 Donate link: http://win211.org
-Tags: comments, spam
-Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
+Tags: 2-1-1, 211, community resources, non-profit, human services, search
+Requires at least: 4.0
+Tested up to: 4.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,103 +11,130 @@ Allows health and human service websites the ability search community resources 
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+In June 2016 Revation Systems updated the Washington State 2-1-1 Community Resources Directory to the newest version 
+of Resource House Public Portal.  This new search engine utilizes a new and enhanced underlying api which allows
+for a variety of search keywords, taxonomy terms, location data, and feature filter options.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+This plugin was developed to allow community resource and health and human service websites to easily add a search
+form to their websites.  
 
-A few notes about the sections above:
+The plugin offers the following features:
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
-
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
-
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+ *   Shortcode [win211search] adds a form to any webpage
+ *   Form includes an autofill keyword search, autofill location, and search button to execute the search
+ *   Plugin converts any link following the specified format (see below) with location data
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+1. Download 'win211-search-plugin.zip' from https://github.com/cderenburger/win211-search-plugin
+2. From the Plugins menu in your Wordpress Admin area select 'Add New' and press the 'Upload Plugin' button and upload the .zip
+   a. Alternately extract and upload 'win211-search-plugin' folder to the '/wp-content/plugins' directory
+3. Activate the plugin through the 'Plugins' menu in WordPress
 
-e.g.
 
-1. Upload `win211-search-plugin.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+== Usage ==
 
-== Frequently Asked Questions ==
+Adding A Search Form To A Website
+To add a basic search form to your Wordpress based site add the following shortcode to a page or post.
 
-= A question that someone might have =
+[win211search]
 
-An answer to that question.
+This will create a basic form where a user can enter a keyword search, set their location, and a search button to initiate 
+the search.
 
-= What about foo bar? =
+== Creating Links ==
 
-Answer to foo bar dilemma.
+There are two type of links commonly used for resource searches, Keyword and Taxonomy. Keyword searches are performed by Solr 
+which will search based on default settings set by the site administrator. Settings described in the Solr section.
 
-== Screenshots ==
+== Keyword Links ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+Resource House uses the following url structure to query the database based on the user's entered keyword(s)
 
-== Changelog ==
+    https://www.resourcehouse.info/win211/Search?q={KEYWORDS}
 
-= 1.0 =
-* A change since the previous version.
-* Another change.
+Above is the minimum required to create a working link. A single keyword or series of keywords are placed in the {keyword} 
+section and the site can perform a search.
 
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
+The above example does not require this plugin to operate. The results of this search will search for the specified 
+keyword(s) statewide.
 
-== Upgrade Notice ==
+The following link example is the expected format, requires use of this plugin, and will allow a user to enter their search 
+location.
 
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
+<a href="https://www.resourcehouse.info/win211/Search?q=Dental+Care" target="_blank" 
+data-relativeurl="Dental+Care">Dental Care</a>
 
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
+The [data-relativeurl=] restates the keyword search. When a location is selected in the [win211search] location form this 
+plugin reassembles the url with consisting of the city and zipcode, geocoordinates, county, and the data-relavtiveurl=.
 
-== Arbitrary section ==
 
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
+== Taxonomy Searches ==
 
-== A brief Markdown Example ==
+The site can also perform more specific searches based on the AIRS Taxonomy. Use the taxonomy code in the following url format
 
-Ordered list:
+https://www.resourcehouse.info/win211/Search/Topics/{TAXONOMY_CODE}/{TAXONOMY_NAME}
+Taxonomy links require the Taxonomy Name following the Taxonomy Code. The link can most easily be obtained by visiting 
+https://www.resourcehouse.info/win211/Topics and drilling down or by visiting 
+https://www.resourcehouse.info/win211/Topics/{TAXONOMY_CODE} and copying the specified url from the Topic List.
 
-1. Some feature
-1. Another feature
-1. Something else about the plugin
+Below is an example of a taxonomy search for Dental Care
 
-Unordered list:
+    <a href="https://www.resourcehouse.info/win211/Search/Topics/LV-1600/Dental_Care" target="_blank" 
+    data-relativeurl="LV-1600/Dental_Care">Dental Care</a>
 
-* something
-* something else
-* third thing
+== Feature Filters ==
 
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
+The above link examples can be extended to include Feature Filters. Filters can be used to further narrow down a list of search 
+results by filtered critera. In the above example for 'Dental Care' we could also add to the search parameters the requirement 
+that the results list return services which also accept a particular form of payment, for example 'WA Apple Health (Medicaid)'. 
+A feature is added to the url by adding:
 
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
+     f={FEATURE_CATEGORY}%3d{FEATURE_CODE}
 
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
+To select appropriate feature codes and obtain the needed parameters perform the search on the website. On the search 
+results page a list of filters will be offered in the left sidebar which apply to the current search. Select a filter from the 
+list. From the url bar on the resulting search page copy the url segment &f=[...] up to the following &. Paste this filter code 
+into both the url and data-relativeurl sections of your link.
 
-`<?php code(); // goes in backticks ?>`
+Below is an example of a keyword search for Dental Care with the Feature WA Apple Health (Medicaid).
+
+     <a href="https://www.resourcehouse.info/win211/Search?q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)" 
+     target="blank" data-relativeurl="Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">
+        Dental Services which accept WA Apple Health for Adults
+     </a>
+
+And an example of a taxonomy based search link with the Feature WA Apple Health (Medicaid).
+
+    <a href="https://www.resourcehouse.info/win211/Search/Topics/LV-1600/Dental_Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)"
+    target="_blank" data-relativeurl="LV-1600/Dental_Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">Taxonomy Dental Care</a>
+
+
+
+NOTE: Any page containing keyword or taxonomy links requires the inclusion of the [win211search] shortcode. This shortcode 
+displays forms required to set the user's specified city, zipcode, and county region. When a user selects a location the keyword 
+or taxonomy links will be automatically updated with the selected location information. This shortcode is not required if you 
+are simply linking to http://win211.org or https://www.resourcehouse.info/win211/Index
+
+-- Features Filters --
+
+As in the keyword section features filters can also be added to taxonomy searches.  Simply include the '&f=[...] as above in
+both the url and data-relativeurl sections.
+
+
+== Solr Settings ==
+As of this writing these settings in Washington are as follows: 
+1. Query Parser - Extended Dismax
+1. Phrase Slop: 1
+1. Multi-Term Match: 2
+1. Search Fields: Provider Name, AKA Names, Service Name, Location Name, Taxonomy Terms (topic), Taxonomy Terms (target), 
+   Address (city), Address (zip), Taxonomy Synonyms
+   a. Not included are: Service Description, Location Description, Address (street), County, Service Keywords, Features
+1. Distance Boost: 20 (tiered)
+1. Distance Spread: 5
+1. Name Boost: 0
+1. Topic Boost: 1
+1. Term Proximity Boost: 1
+1. Term Proximity Distance: 2
+1. Auto Radius Threshold: 0
+1. Use Service Priority: Yes
