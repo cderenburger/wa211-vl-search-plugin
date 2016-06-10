@@ -50,7 +50,7 @@ The above example does not require this plugin to operate.  The results of this 
 The following link example is the expected format, requires use of this plugin, and will allow a user to enter their search location.
 
     <a href="https://www.resourcehouse.info/win211/Search?q=Dental+Care" target="_blank" 
-    data-relativeurl="q=Dental+Care">Dental Care</a>
+    data-relativeurl="Dental+Care">Dental Care</a>
     
 The ```data-relativeurl=``` restates the keyword search.  When a location is selected in the ```[win211search]``` location form this plugin reassembles the url with consisting of the city and zipcode, geocoordinates, county, and the ```data-relavtiveurl=```. 
 
@@ -65,10 +65,15 @@ Taxonomy links require the Taxonomy Name following the Taxonomy Code.  The link 
 https://www.resourcehouse.info/win211/Topics and drilling down or by visiting 
 https://www.resourcehouse.info/win211/Topics/{TAXONOMY_CODE} and copying the specified url from the Topic List.
 
+Below is an example of a taxonomy search for Dental Care
+
+    <a href="https://www.resourcehouse.info/win211/Search/Topics/LV-1600/Dental_Care" target="_blank" 
+    data-relativeurl="LV-1600/Dental_Care">Dental Care</a>
+
 > **NOTE:**
 >*Any page containing keyword or taxonomy links requires the inclusion of the [win211search] shortcode.  This shortcode displays forms required to set the user's specified city, zipcode, and county region.  When a user selects a location the keyword or taxonomy links will be automatically updated with the selected location information.  This shortcode is not required if you are simply linking to http://win211.org or https://www.resourcehouse.info/win211/Index*
 
-##### Feature Filters
+#### Feature Filters
 The above example can be extended to include Feature Filters. Filters can be used to further narrow down a list of search results by filtered criteria.  In the above example for 'Dental Care' we could also add to the search parameters the requirement that the results list return services which also accept a particular form of payment, for example 'WA Apple Health (Medicaid)'.  A feature is added to the url by adding:
 
 `f={FEATURE_CATEGORY}%3d{FEATURE_CODE}`
@@ -78,9 +83,14 @@ To select appropriate feature codes and obtain the needed parameters perform the
 Below is an example of a search for Dental Care with the Feature WA Apple Health (Medicaid).
 
     <a href="https://www.resourcehouse.info/win211/Search?q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)" target="blank" 
-    data-relativeurl="q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">
+    data-relativeurl="Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">
     Dental Services which accept WA Apple Health for Adults</a>
-    
+
+And an example of a taxonomy based search link with the Feature WA Apple Health (Medicaid).
+
+    <a href="https://www.resourcehouse.info/win211/Search/Topics/LV-1600/Dental_Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)"
+    target="_blank" data-relativeurl="LV-1600/Dental_Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">Taxonomy Dental Care</a>
+
 #### Solr Settings
 As of this writing these settings in Washington are as follows: 
 
@@ -100,13 +110,18 @@ As of this writing these settings in Washington are as follows:
 
 ## Changelog
 
+### [0.7] - 2016-06-09
+#### Added
+ * Added url constructing code for taxonomy links.
+ * Added taxonomy documentation to readme files with examples
+
 ### [0.6] - 2016-06-04
 #### Added
  * Added documentation for creating links for both keyword and taxonomy searches
  * Added documentation on adding features and needed link structures
 
 #### Updated
- - Updated README.txt and README.md
+ * Updated README.txt and README.md
 
 ### [0.5] - 2016-06-03
 #### Added
@@ -123,14 +138,14 @@ As of this writing these settings in Washington are as follows:
 
 ### [0.3] - 2016-05-28
 #### Added
-* Shortcode functionality added to plugin
+ * Shortcode functionality added to plugin
 
 ### [0.2] - 2016-05-26
 #### Added
-* Build url code added and edited, plugin now functioning
+ * Build url code added and edited, plugin now functioning
 
 ### [0.1] - 2016-05-19
-* Repository initiated, Minnesotahelp.info code rolled in to plugin
+ * Repository initiated, Minnesotahelp.info code rolled in to plugin
 
 ## Contributing
 

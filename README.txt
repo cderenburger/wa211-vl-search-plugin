@@ -63,14 +63,29 @@ The following link example is the expected format, requires use of this plugin, 
 location.
 
 <a href="https://www.resourcehouse.info/win211/Search?q=Dental+Care" target="_blank" 
-data-relativeurl="q=Dental+Care">Dental Care</a>
+data-relativeurl="Dental+Care">Dental Care</a>
 
 The [data-relativeurl=] restates the keyword search. When a location is selected in the [win211search] location form this 
 plugin reassembles the url with consisting of the city and zipcode, geocoordinates, county, and the data-relavtiveurl=.
 
--- Feature Filters --
 
-The above examples can be extended to include Feature Filters. Filters can be used to further narrow down a list of search 
+== Taxonomy Searches ==
+
+The site can also perform more specific searches based on the AIRS Taxonomy. Use the taxonomy code in the following url format
+
+https://www.resourcehouse.info/win211/Search/Topics/{TAXONOMY_CODE}/{TAXONOMY_NAME}
+Taxonomy links require the Taxonomy Name following the Taxonomy Code. The link can most easily be obtained by visiting 
+https://www.resourcehouse.info/win211/Topics and drilling down or by visiting 
+https://www.resourcehouse.info/win211/Topics/{TAXONOMY_CODE} and copying the specified url from the Topic List.
+
+Below is an example of a taxonomy search for Dental Care
+
+    <a href="https://www.resourcehouse.info/win211/Search/Topics/LV-1600/Dental_Care" target="_blank" 
+    data-relativeurl="LV-1600/Dental_Care">Dental Care</a>
+
+== Feature Filters ==
+
+The above link examples can be extended to include Feature Filters. Filters can be used to further narrow down a list of search 
 results by filtered critera. In the above example for 'Dental Care' we could also add to the search parameters the requirement 
 that the results list return services which also accept a particular form of payment, for example 'WA Apple Health (Medicaid)'. 
 A feature is added to the url by adding:
@@ -82,21 +97,19 @@ results page a list of filters will be offered in the left sidebar which apply t
 list. From the url bar on the resulting search page copy the url segment &f=[...] up to the following &. Paste this filter code 
 into both the url and data-relativeurl sections of your link.
 
-Below is an example of a search for Dental Care with the Feature WA Apple Health (Medicaid).
+Below is an example of a keyword search for Dental Care with the Feature WA Apple Health (Medicaid).
 
      <a href="https://www.resourcehouse.info/win211/Search?q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)" 
-     target="blank" data-relativeurl="q=Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">
+     target="blank" data-relativeurl="Dental+Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">
         Dental Services which accept WA Apple Health for Adults
      </a>
 
-== Taxonomy Searches ==
+And an example of a taxonomy based search link with the Feature WA Apple Health (Medicaid).
 
-The site can also perform more specific searches based on the AIRS Taxonomy. Use the taxonomy code in the following url format
+    <a href="https://www.resourcehouse.info/win211/Search/Topics/LV-1600/Dental_Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)"
+    target="_blank" data-relativeurl="LV-1600/Dental_Care&f=Payment+options%3dWA+Apple+Health+(Medicaid)">Taxonomy Dental Care</a>
 
-https://www.resourcehouse.info/win211/Search/Topics/{TAXONOMY_CODE}/{TAXONOMY_NAME}
-Taxonomy links require the Taxonomy Name following the Taxonomy Code. The link can most easily be obtained by visiting 
-https://www.resourcehouse.info/win211/Topics and drilling down or by visiting 
-https://www.resourcehouse.info/win211/Topics/{TAXONOMY_CODE} and copying the specified url from the Topic List.
+
 
 NOTE: Any page containing keyword or taxonomy links requires the inclusion of the [win211search] shortcode. This shortcode 
 displays forms required to set the user's specified city, zipcode, and county region. When a user selects a location the keyword 
