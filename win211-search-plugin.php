@@ -15,8 +15,8 @@
  * @wordpress-plugin
  * Plugin Name:       WIN211 Search Plugin
  * Plugin URI:        https://github.com/cderenburger/win211-search-plugin
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Description:       Allows health and human service websites the ability to add widgets, shortcuts, or links to allow users to search for community resources on search providers utilizing the Resource House API.
+ * Version:           0.4
  * Author:            Cory Derenburger
  * Author URI:        http://win211.org
  * License:           GPL-2.0+
