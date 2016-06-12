@@ -33,6 +33,16 @@ To add a basic search form to your Wordpress based site add the following shortc
      
 This will create a basic form where a user can enter a keyword search, set their location, and a search button to initiate the search.
 
+Shortcodes cannot be used in sidebars or as widgets without the use of other plugins.  Instead of using the shortcode, you can add a keyword and location search form to a sidebar.  Place a Text Widget into your sidebar and include the following html code.
+
+    <form id="keyword" name="keyword" action="/wp-content/plugins/win211-search-plugin/public/php/demo_keyprocess.php" method="post" target="_new" method="get">
+        <input id="taxname" name="taxname" onclick="this.value='';" type="text" name="keyword" value="Type a keyword" maxlength="30" /> 
+        <input type="text" name="city" id="city" value="" />
+        <input type="text" name="geocoor" id="geocoor" value="" />
+        <input type="text" name="region" id="region" value=""/>
+        <input type="submit" value="Search" id="search">
+    </form>
+
 
 ### Creating Links
 
