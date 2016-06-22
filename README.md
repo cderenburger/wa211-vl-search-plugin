@@ -92,7 +92,7 @@ The above examples can be extended to include Feature Filters. Filters can be us
 
 `f={FEATURE_CATEGORY}%3d{FEATURE_CODE}`
 
-To select appropriate feature codes and obtain the needed parameters perform the keyword or taxonomy search on the website.  On the search results page a list of filters will be offered in the left sidebar which apply to the current search.  Select a filter from the list.  From the url bar on the resulting search page copy the url segment ```&f=[...]``` up to the following ```&```.  Paste this filter code into both the ```url``` and ```data-relativeurl``` sections of your link.  
+To select appropriate feature codes and obtain the needed parameters, perform the keyword or taxonomy search for your topic on the website.  On the search results page a list of filters will be offered in the left sidebar which apply to the current search.  Select a filter from the list.  From the url bar on the resulting search page copy the url segment ```&f=[...]``` up to the following ```&```.  Paste this filter code into both the ```href``` and ```data-relativeurl``` sections of your link.  
 
 Below is an example of a search for Dental Care with the Feature WA Apple Health (Medicaid).
 
