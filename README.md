@@ -27,6 +27,8 @@ The plugin offers the following features:
 
 ### Adding A Search Form To A Website
 
+#### Shortcode
+
 To add a basic search form to your Wordpress based site add the following shortcode to a page or post.
 
 `[win211search]`
@@ -83,7 +85,7 @@ Below is an example of a taxonomy search for Dental Care
     data-relativeurl="LV-1600/Dental_Care">Dental Care</a>
 
 > **NOTE:**
->*Any page containing keyword or taxonomy links requires the inclusion of either the [win211search] shortcode or the Search Form html.  This shortcode and Search Forms home code display forms required to set the user's specified city, zipcode, and county region.  When a user enters a location, any keyword or taxonomy links will be automatically updated with the selected location information.  This shortcode is not required if you are simply linking to http://win211.org or https://www.resourcehouse.info/win211/Index*
+>*Any page containing keyword or taxonomy links requires the inclusion of either the [win211search] shortcode or the search form html.  This shortcode and search form html code display the forms required to set the user's specified city, zipcode, geocoordinates, and county region.  When a user enters a location, any keyword or taxonomy links will be automatically updated with the selected location information.  The shortcode or search form code is not required if you are simply linking to http://win211.org or https://www.resourcehouse.info/win211/Index*
 
 #### Feature Filters
 The above examples can be extended to include Feature Filters. Filters can be used to further narrow down a list of search results by filtered criteria.  In the above examples for 'Dental Care' we could also add to the search parameters the requirement that the results list return services which also accept a particular form of payment, for example 'WA Apple Health (Medicaid)'.  A feature is added to the url by including:
