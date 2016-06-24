@@ -27,7 +27,7 @@ add_shortcode( 'win211search', 'win211search_shortcode' ); */
 				<input id="taxname" name="taxname" onclick="this.value='';" type="text" name="keyword" value="" placeholder="What are you looking for?" maxlength="30" /> 
 				<p><input type="text" name="city" id="city" value="" placeholder="Location" />
 				<input type="text" name="geocoor" id="geocoor" value="" />
-				<input type="text" name="region" id="region" value=""/>
+				<input type="text" name="region" id="region" value=""/><br/>
 				<input type="submit" value="Search" id="search">
 			</form>
 			
