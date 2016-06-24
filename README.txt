@@ -48,15 +48,15 @@ Shortcodes cannot be used in sidebars or as widgets without the use of other plu
 can add a keyword and location search form to a sidebar or other locations. Place a Text Widget into your sidebar and
 include the following html code.
 
-   <form id="keyword" name="keyword" action="/wp-content/plugins/win211-search-plugin/public/php/211search_keyprocess.php"
-   method="post" target="_new" method="get">
-       <input id="taxname" name="taxname" onclick="this.value='';" type="text" name="keyword" value="Type a keyword"
-       maxlength="30" /> 
-       <input type="text" name="city" id="city" value="" />
-       <input type="text" name="geocoor" id="geocoor" value="" />
-       <input type="text" name="region" id="region" value=""/>
-       <input type="submit" value="Search" id="search">
-   </form>
+    <form id="keyword" name="keyword" action="/wp-content/plugins/win211-search-plugin/public/php/211search_keyprocess.php" 
+    method="post" target="_new" method="get">
+        <input id="taxname" name="taxname" onclick="this.value='';" type="text" name="keyword" value="Type a keyword" 
+        maxlength="30" /> 
+        <input type="text" name="city" id="city" value="" />
+        <input type="text" name="geocoor" id="geocoor" value="" />
+        <input type="text" name="region" id="region" value=""/>
+        <input type="submit" value="Search" id="search">
+    </form>
 
 
 ==Creating Links==
@@ -133,7 +133,8 @@ And an example of a taxonomy based search link with the Feature WA Apple Health 
    (Medicaid)">Dental Care which accepts WA Apple Health</a>
    
 Multiple features can be combined if desired. To include additional features in a link append 
-&f={FEATURE_CATEGORY}%3d{FEATURE_CODE} to the end of the link and data-relativeurl.
+    &f={FEATURE_CATEGORY}%3d{FEATURE_CODE} 
+to the end of the link and data-relativeurl.
 
 *Solr Settings*
 As of this writing these settings in Washington are as follows:
