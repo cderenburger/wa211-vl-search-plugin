@@ -32,7 +32,7 @@
 $(document).ready(function(){
 	var citiespath = citiesUrl.citiesUrl ;
 	var ac_cities = {
-		source: citiespath+"/win211-search-plugin/public/php/demo_cities.php", 
+		source: citiespath+"php/211search_cities.php", 
 		select: function(event, ui){
 			$("#city").val(ui.item.city);
 			$("#geocoor").val(ui.item.geocoor);
@@ -56,7 +56,7 @@ $(document).ready(function(){
 		minLength:1
 	};
 	var ac_keyword = {
-		source: citiespath+"/win211-search-plugin/public/php/demo_keywords.php",
+		source: citiespath+"php/211search_keywords.php",
 		select: function(event, ui){
 			$("#taxname").val(ui.item.taxval);
 			var taxonomyname = $("#taxval").val();

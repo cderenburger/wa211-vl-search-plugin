@@ -1,7 +1,7 @@
 <script type="text/javascript">
 jQuery(document).ready(function(){
 	var ac_cities = {
-		source: "/ajax/demo_cities.php",
+		source: "/ajax/211search_cities.php",
 		select: function(event, ui){
 			jQuery("#city").val(ui.item.city);
 			jQuery("#geocoor").val(ui.item.geocoor);
@@ -19,7 +19,7 @@ this.href = "https://www.resourcehouse.info/win211/Search?" + jQuery(this).attr(
 		minLength:1
 	};
 	var ac_keyword = {
-		source: "/ajax/demo_keywords.php",
+		source: "/ajax/211search_keywords.php",
 		select: function(event, ui){
 			jQuery("#taxname").val(ui.item.taxval);
 			var taxonomyname = jQuery ("#taxval").val();
