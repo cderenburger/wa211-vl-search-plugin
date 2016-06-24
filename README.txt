@@ -46,7 +46,7 @@ Shortcodes cannot be used in sidebars or as widgets without the use of other plu
 can add a keyword and location search form to a sidebar place a Text Widget into your sidebar and include the following 
 html code.
 
-    <form id="keyword" name="keyword" action="/wp-content/plugins/win211-search-plugin/public/php/demo_keyprocess.php" 
+    <form id="keyword" name="keyword" action="/wp-content/plugins/win211-search-plugin/public/php/211search_keyprocess.php" 
     method="post" target="_new" method="get">
         <input id="taxname" name="taxname" onclick="this.value='';" type="text" name="keyword" value="Type a keyword" 
         maxlength="30" /> 
