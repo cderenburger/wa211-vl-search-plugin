@@ -126,6 +126,14 @@ As of this writing these settings in Washington are as follows:
 
 ## Changelog
 
+### [1.1.2] - 2016-07-07
+#### Added
+ * Includes initial plugin update script for testing
+
+### [1.1.1] - 2016-07-01
+#### Changed
+ * Fixes release information
+
 ### [1.1] - 2016-06-23
 #### Changed
  * Convert static links to dynamic php links using Wordpress plugin_url
