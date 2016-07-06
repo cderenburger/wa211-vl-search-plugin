@@ -16,7 +16,7 @@
  * Plugin Name:       WIN211 Search Plugin
  * Plugin URI:        https://github.com/cderenburger/win211-search-plugin
  * Description:       Allows health and human service websites the ability to add widgets, shortcuts, or links to allow users to search for community resources on search providers utilizing the Resource House API.
- * Version:           1.1.1
+ * Version:           1.1.2
  * Author:            Cory Derenburger
  * Author URI:        http://win211.org
  * License:           GPL-2.0+
@@ -56,6 +56,24 @@ register_deactivation_hook( __FILE__, 'deactivate_win211_search_plugin' );
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-win211-search-plugin.php';
+
+/**
+ * Smashing Updater Script from https://github.com/rayman813/smashing-updater-plugin
+ * checks for new releases on the GitHub repo.
+ */
+if( ! class_exists( 'Smashing_Updater' ) ){
+	include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
+}
+
+$updater = new Smashing_Updater( __FILE__ );
+$updater->set_username( 'cderenburger' );
+$updater->set_repository( 'win211-search-plugin' );
+/*
+	$updater->authorize( 'abcdefghijk1234567890' ); // Your auth code goes here for private repos
+*/
+$updater->initialize();
+
+
 
 /**
  * Begins execution of the plugin.
