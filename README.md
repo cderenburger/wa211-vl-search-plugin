@@ -126,9 +126,9 @@ As of this writing these settings in Washington are as follows:
 
 ## Changelog
 
-### [1.1.2] - 2016-07-07
+### [1.2] - 2016-07-07
 #### Added
- * Includes initial plugin update script for testing
+ * Includes plugin update script for updating within WordPress
 
 ### [1.1.1] - 2016-07-01
 #### Changed
