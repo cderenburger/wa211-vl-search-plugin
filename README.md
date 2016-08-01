@@ -125,6 +125,10 @@ As of this writing these settings in Washington are as follows:
 1. **Use Service Priority:** Yes
 
 ## Changelog
+### [1.2.1] - 2015-07-31
+#### Added
+ * Sets link and keyword searches to be displayed in ascending order rather than default tiered sort.
+
 
 ### [1.2] - 2016-07-07
 #### Added
