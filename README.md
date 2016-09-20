@@ -125,6 +125,10 @@ As of this writing these settings in Washington are as follows:
 1. **Use Service Priority:** Yes
 
 ## Changelog
+### [1.2.3] - 2016-09-20
+#### Changed
+ * Fixes issue with overlapping citites and zipcodes.
+
 ### [1.2.2] - 2016-07-31
 #### Changed
  * Added level 2-6 taxonomy terms, broadening the availablility of terms to the user.
