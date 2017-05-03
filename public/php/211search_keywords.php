@@ -28,14 +28,12 @@
 
 $taxonomy = array(
    array('taxname'=>'Food Bank', taxval=>'Food Pantries'),
-   array('taxname'=>'Chronic Disease Self Management', taxval=>'Chronic Disease Self Management'),
    array('taxname'=>'Hot Meals', taxval=>'Meals'),
    array('taxname'=>'WIC - Women, Infants & Children', taxval=>'WIC'),
    array('taxname'=>'Bus Tickets / Gas Money', taxval=>'Transportation Expense Assistance'),
    array('taxname'=>'Rent Payment Assistance', taxval=>'Rent Payment Assistance'),
    array('taxname'=>'Utility Assistance', taxval=>'Utility Service Payment Assistance'),
-   array('taxname'=>'Emergency Shelter', taxval=>'Emergency Shelter'),
-   array('taxname'=>'Brown Bag Food Programs', taxval=>'Brown Bag Food Programs'),
+
 	array('taxname'=>'Food', taxval=>'Food'),
 	array('taxname'=>'Emergency Food', taxval=>'Emergency Food'),
 	array('taxname'=>'Brown Bag Food Programs', taxval=>'Brown Bag Food Programs'),
@@ -5454,7 +5452,7 @@ $taxonomy = array(
 	array('taxname'=>'Inpatient Mental Health Facilities', taxval=>'Inpatient Mental Health Facilities'),
 	array('taxname'=>'Psychiatric Hospitals', taxval=>'Psychiatric Hospitals'),
 	array('taxname'=>'Adult Psychiatric Hospitals', taxval=>'Adult Psychiatric Hospitals'),
-	array('taxname'=>'Children\'s Adolescent Psychiatric Hospitals', taxval=>'Children\'s Adolescent Psychiatric Hospitals'),
+	array('taxname'=>'Children\'s/Adolescent Psychiatric Hospitals', taxval=>'Children\'s/Adolescent Psychiatric Hospitals'),
 	array('taxname'=>'Forensic Psychiatric Hospitals', taxval=>'Forensic Psychiatric Hospitals'),
 	array('taxname'=>'Psychiatric Inpatient Units', taxval=>'Psychiatric Inpatient Units'),
 	array('taxname'=>'Adolescent Psychiatric Inpatient Units', taxval=>'Adolescent Psychiatric Inpatient Units'),
@@ -5469,7 +5467,7 @@ $taxonomy = array(
 	array('taxname'=>'Private Therapy Practices', taxval=>'Private Therapy Practices'),
 	array('taxname'=>'Residential Treatment Facilities', taxval=>'Residential Treatment Facilities'),
 	array('taxname'=>'Adult Residential Treatment Facilities', taxval=>'Adult Residential Treatment Facilities'),
-	array('taxname'=>'Children\'s Adolescent Residential Treatment Facilities', taxval=>'Children\'s Adolescent Residential Treatment Facilities'),
+	array('taxname'=>'Children\'s/Adolescent Residential Treatment Facilities', taxval=>'Children\'s/Adolescent Residential Treatment Facilities'),
 	array('taxname'=>'Mental Health Assessment and Treatment', taxval=>'Mental Health Assessment and Treatment'),
 	array('taxname'=>'Counseling Services', taxval=>'Counseling Services'),
 	array('taxname'=>'General Counseling Services', taxval=>'General Counseling Services'),
@@ -8227,6 +8225,7 @@ $taxonomy = array(
 	array('taxname'=>'Visual Impairments', taxval=>'Visual Impairments'),
 	array('taxname'=>'Blindness', taxval=>'Blindness'),
 	array('taxname'=>'Partial Sightedness', taxval=>'Partial Sightedness'),
+
 );
  
 // Cleaning up the term
@@ -8244,5 +8243,5 @@ foreach($taxonomy as $taxname){
 }
  
 // Truncate, encode and return the results
-$matches = array_slice($matches, 0, 5);
+$matches = array_slice($matches, 0, 10);
 print json_encode($matches);
