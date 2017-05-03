@@ -890,6 +890,47 @@ $cities = array(
    array('city'=>'Yarrow Point, WA 98004', geocoor=>'47.6155%2c-122.2072', region=>'King%2C+WA'),
    array('city'=>'Yelm, WA 98597', geocoor=>'46.9206%2c-122.588', region=>'Thurston%2C+WA'),
    array('city'=>'Zillah, WA 98953', geocoor=>'46.4158%2c-120.2662', region=>'Yakima%2C+WA'),
+   array('city'=>'Adams County', geocoor=>'47.0048%2c-118.5333', region=>'Adams%2C+WA'),
+   array('city'=>'Asotin County', geocoor=>'46.1818%2c-117.2277', region=>'Asotin%2C+WA'),
+   array('city'=>'Benton County', geocoor=>'46.2280%2c-119.5168', region=>'Benton%2C+WA'),
+   array('city'=>'Chelan County', geocoor=>'47.8598%2c-120.6185', region=>'Chelan%2C+WA'),
+   array('city'=>'Clallam County', geocoor=>'48.1130%2c-123.9306', region=>'Clallam%2C+WA'),
+   array('city'=>'Clark County', geocoor=>'45.7716%2c-122.4859', region=>'Clark%2C+WA'),
+   array('city'=>'Columbia County', geocoor=>'46.2928%2c-117.9116', region=>'Columbia%2C+WA'),
+   array('city'=>'Cowlitz County', geocoor=>'46.1859%2c-122.6586', region=>'Cowlitz%2C+WA'),
+   array('city'=>'Douglas County', geocoor=>'47.7358%2c-119.6958', region=>'Douglas%2C+WA'),
+   array('city'=>'Ferry County', geocoor=>'48.4372%2c-118.5170', region=>'Ferry%2C+WA'),
+   array('city'=>'Franklin County', geocoor=>'46.5345%2c-118.9069', region=>'Franklin%2C+WA'),
+   array('city'=>'Garfield County', geocoor=>'46.4294%2c-117.5367', region=>'Garfield%2C+WA'),
+   array('city'=>'Grant County', geocoor=>'47.2136%2c-119.4677', region=>'Grant%2C+WA'),
+   array('city'=>'Grays Harbor County', geocoor=>'47.1427%2c-123.8270', region=>'Grays Harbor%2C+WA'),
+   array('city'=>'Island County', geocoor=>'48.1584%2c-122.6705', region=>'Island%2C+WA'),
+   array('city'=>'Jefferson County', geocoor=>'47.8026%2c-123.5218', region=>'Jefferson%2C+WA'),
+   array('city'=>'King County', geocoor=>'47.4935%2c-121.8323', region=>'King%2C+WA'),
+   array('city'=>'Kitsap County', geocoor=>'47.6396%2c-122.6496', region=>'Kitsap%2C+WA'),
+   array('city'=>'Kittitas County', geocoor=>'47.1244%2c-120.6767', region=>'Kittitas%2C+WA'),
+   array('city'=>'Klickitat County', geocoor=>'45.8695%2c-120.7801', region=>'Klickitat%2C+WA'),
+   array('city'=>'Lewis County', geocoor=>'46.5800%2c-122.3774', region=>'Lewis%2C+WA'),
+   array('city'=>'Lincoln County', geocoor=>'47.5827%2c-118.4176', region=>'Lincoln%2C+WA'),
+   array('city'=>'Mason County', geocoor=>'47.3541%2c-123.1738', region=>'Mason%2C+WA'),
+   array('city'=>'Okanogan County', geocoor=>'48.5509%2c-119.6910', region=>'Okanogan%2C+WA'),
+   array('city'=>'Pacific County', geocoor=>'46.5565%2c-123.7824', region=>'Pacific%2C+WA'),
+   array('city'=>'Pend Oreille County', geocoor=>'48.5438%2c-117.2321', region=>'Pend Oreille%2C+WA'),
+   array('city'=>'Pierce County', geocoor=>'47.0407%2c-122.1447', region=>'Pierce%2C+WA'),
+   array('city'=>'San Juan County', geocoor=>'48.5088%2c-123.1006', region=>'San Juan%2C+WA'),
+   array('city'=>'Skagit County', geocoor=>'48.4930%2c-121.8162', region=>'Skagit%2C+WA'),
+   array('city'=>'Skamania County', geocoor=>'46.0247%2c-121.9532', region=>'Skamania%2C+WA'),
+   array('city'=>'Snohomish County', geocoor=>'48.0549%2c-121.7664', region=>'Snohomish%2C+WA'),
+   array('city'=>'Spokane County', geocoor=>'47.6203%2c-117.4043', region=>'Spokane%2C+WA'),
+   array('city'=>'Stevens County', geocoor=>'48.3906%2c-117.8548', region=>'Stevens%2C+WA'),
+   array('city'=>'Thurston County', geocoor=>'46.9325%2c-122.8294', region=>'Thurston%2C+WA'),
+   array('city'=>'Wahkiakum County', geocoor=>'46.2946%2c-123.4244', region=>'Wahkiakum%2C+WA'),
+   array('city'=>'Walla Walla County', geocoor=>'46.2546%2c-118.4803', region=>'Walla Walla%2C+WA'),
+   array('city'=>'Whatcom County', geocoor=>'48.8426%2c-121.8364', region=>'Whatcom%2C+WA'),
+   array('city'=>'Whitman County', geocoor=>'46.9033%2c-117.5229', region=>'Whitman%2C+WA'),
+   array('city'=>'Yakima County', geocoor=>'46.4565%2c-120.7401', region=>'Yakima%2C+WA'),
+
+   
 );	
  
 // Cleaning up the term
@@ -907,5 +948,5 @@ foreach($cities as $city){
 }
  
 // Truncate, encode and return the results
-$matches = array_slice($matches, 0, 5);
+$matches = array_slice($matches, 0, 10);
 print json_encode($matches);
