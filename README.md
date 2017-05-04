@@ -1,7 +1,7 @@
 # WIN211-Search-Plugin for WordPress 
 
 
-Allows health and human service WordPress websites the ability search community resources utilizing the Resource House API.
+Allows health and human service WordPress websites the ability search community resources utilizing the Resource House URL structure.
 
 ## Description
 
@@ -125,6 +125,17 @@ As of this writing these settings in Washington are as follows:
 1. **Use Service Priority:** Yes
 
 ## Changelog
+
+### [1.2.4] - 2017-05-02
+#### Changed
+ * Fixes issue with Topic links with included Features or Regions to have a question mark appended.
+ * Increase autosuggest of both cities and keywords to 10 entries.
+ * Updated to new taxonomy table as of 03-20-2017. 
+
+#### Added
+ * Added Counties to autosuggest list.  Data from US Census.
+ * Added YG Codes to suggestion list.
+
 ### [1.2.3] - 2016-09-20
 #### Changed
  * Fixes issue with overlapping citites and zipcodes.

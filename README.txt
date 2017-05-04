@@ -3,11 +3,11 @@ Contributors: (cderenburger)
 Donate link: http://win211.org
 Tags: 2-1-1, 211, community resources, non-profit, human services, search
 Requires at least: 4.0
-Tested up to: 4.5.3
+Tested up to: 4.7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Allows health and human service websites the ability search community resources utilizing the Resource House API.
+Allows health and human service websites the ability search community resources utilizing the Resource House URL structure.
 
 == Description ==
 
