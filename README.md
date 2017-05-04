@@ -134,6 +134,7 @@ As of this writing these settings in Washington are as follows:
 
 #### Added
  * Added Counties to autosuggest list.  Data from US Census.
+ * Added YG Codes to suggestion list.
 
 ### [1.2.3] - 2016-09-20
 #### Changed
