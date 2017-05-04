@@ -906,7 +906,7 @@ $cities = array(
    array('city'=>'Grays Harbor County', geocoor=>'47.1427%2c-123.8270', region=>'Grays Harbor%2C+WA'),
    array('city'=>'Island County', geocoor=>'48.1584%2c-122.6705', region=>'Island%2C+WA'),
    array('city'=>'Jefferson County', geocoor=>'47.8026%2c-123.5218', region=>'Jefferson%2C+WA'),
-   array('city'=>'King County', geocoor=>'47.4935%2c-121.8323', region=>'King%2C+WA'),
+   array('city'=>'King County', geocoor=>'47.6114%2c-122.3305', region=>'King%2C+WA'),
    array('city'=>'Kitsap County', geocoor=>'47.6396%2c-122.6496', region=>'Kitsap%2C+WA'),
    array('city'=>'Kittitas County', geocoor=>'47.1244%2c-120.6767', region=>'Kittitas%2C+WA'),
    array('city'=>'Klickitat County', geocoor=>'45.8695%2c-120.7801', region=>'Klickitat%2C+WA'),
