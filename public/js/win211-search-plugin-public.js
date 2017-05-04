@@ -46,11 +46,17 @@ $(document).ready(function(){
 		console.log(location);
 			$("a[href^='https://www.resourcehouse.info/win211/Search?q=']").not("a[href^='https://www.resourcehouse.info/win211/CHANGEME']")
 			.each(function(){
-			this.href = "https://www.resourcehouse.info/win211/Search?q=" + $(this).attr('data-relativeurl')+amp+"loc="+location+amp+"geo="+geocoor+amp+"reg="+region+amp+"&o=distance-asc";
+			this.href = "https://www.resourcehouse.info/win211/Search?q=" + $(this).attr('data-relativeurl')+amp+"loc="+location+amp+"geo="+geocoor+amp+"reg="+region+amp+"o=distance-asc";
 			});
 			$("a[href^='https://www.resourcehouse.info/win211/Search/Topics/']").not("a[href^='https://www.resourcehouse.info/win211/CHANGEME']")
 			.each(function(){
-			this.href = "https://www.resourcehouse.info/win211/Search/Topics/" + $(this).attr('data-relativeurl')+"?"+amp+"loc="+location+amp+"geo="+geocoor+amp+"reg="+region+amp+"&o=distance-asc";
+			 if ($(this).attr('data-relativeurl').indexOf('?') > -1)
+				{
+					this.href = "https://www.resourcehouse.info/win211/Search/Topics/"+$(this).attr('data-relativeurl')+amp+"loc="+location+amp+"geo="+geocoor+amp+"reg="+region+amp+"o=distance-asc";
+				} else
+				{
+					this.href = "https://www.resourcehouse.info/win211/Search/Topics/"+$(this).attr('data-relativeurl')+"?"+amp+"loc="+location+amp+"geo="+geocoor+amp+"reg="+region+amp+"o=distance-asc";
+				}
 			});
 		},
 		minLength:1
