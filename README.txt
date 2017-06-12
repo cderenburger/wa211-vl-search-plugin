@@ -3,7 +3,7 @@ Contributors: (cderenburger)
 Donate link: http://win211.org
 Tags: 2-1-1, 211, community resources, non-profit, human services, search
 Requires at least: 4.0
-Tested up to: 4.7.4
+Tested up to: 4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
