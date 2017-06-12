@@ -126,6 +126,10 @@ As of this writing these settings in Washington are as follows:
 
 ## Changelog
 
+### [1.2.5] - 2017-06-12
+####
+ * Address potential security issue.
+
 ### [1.2.4] - 2017-05-02
 #### Changed
  * Fixes issue with Topic links with included Features or Regions to have a question mark appended.
