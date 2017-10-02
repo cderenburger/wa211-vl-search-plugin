@@ -126,6 +126,10 @@ As of this writing these settings in Washington are as follows:
 
 ## Changelog
 
+### [1.2.6] - 2017-10-02
+####
+ * Updated to latest taxonomy released Oct 2nd, 2017
+
 ### [1.2.5] - 2017-06-12
 ####
  * Address potential security issue.
@@ -138,7 +142,7 @@ As of this writing these settings in Washington are as follows:
 
 #### Added
  * Added Counties to autosuggest list.  Data from US Census.
- * Added YG Codes to suggestion list.
+ * Added YH Codes to suggestion list.
 
 ### [1.2.3] - 2016-09-20
 #### Changed
