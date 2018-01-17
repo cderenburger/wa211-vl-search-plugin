@@ -126,6 +126,11 @@ As of this writing these settings in Washington are as follows:
 
 ## Changelog
 
+### [1.2.7] - 2018-01-05
+####
+ * Updated to latest taxonomy released Jan 4th, 2018
+
+
 ### [1.2.6] - 2017-10-02
 ####
  * Updated to latest taxonomy released Oct 2nd, 2017
