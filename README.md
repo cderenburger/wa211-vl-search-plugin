@@ -126,6 +126,10 @@ As of this writing these settings in Washington are as follows:
 
 ## Changelog
 
+### [1.2.8] - 2018-10-23
+####
+ * Added incontact email addresses to city lookup to populate contact form
+
 ### [1.2.7] - 2018-01-05
 ####
  * Updated to latest taxonomy released Jan 4th, 2018

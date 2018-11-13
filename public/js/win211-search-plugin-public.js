@@ -37,9 +37,13 @@ $(document).ready(function(){
 			$("#city").val(ui.item.city);
 			$("#geocoor").val(ui.item.geocoor);
 			$("#region").val(ui.item.region);
+			$("#email-211").val(ui.item.email);
+			$("#user-location").val(ui.item.city);
 			var location =  $("#city").val();
 			var geocoor = $("#geocoor").val();
 			var region = $("#region").val();
+			var email = $("#email-211").val();
+			var userlocation = $("#user-location").val();
 			var domain = "www.resourcehouse.com/win211" ;
 			var geoloc = "&loc=";
 			var amp = "&".replace(/#038;/g,"");
