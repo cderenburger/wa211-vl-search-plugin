@@ -10,3 +10,9 @@
  #region {
      display: none;
  }
+#email-211 {
+     display: none !important;
+}
+#user-location {
+     display: none !important;
+}
