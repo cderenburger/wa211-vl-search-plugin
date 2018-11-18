@@ -126,21 +126,25 @@ As of this writing these settings in Washington are as follows:
 
 ## Changelog
 
+### [1.2.8.1] - 2018-11-18
+#### Updated
+ * Updated incontact email addresses on city lookup to populate contact form
+ 
 ### [1.2.8] - 2018-10-23
-####
+#### Added
  * Added incontact email addresses to city lookup to populate contact form
 
 ### [1.2.7] - 2018-01-05
-####
+#### Updated
  * Updated to latest taxonomy released Jan 4th, 2018
 
 
 ### [1.2.6] - 2017-10-02
-####
+#### Updated
  * Updated to latest taxonomy released Oct 2nd, 2017
 
 ### [1.2.5] - 2017-06-12
-####
+#### Changed
  * Address potential security issue.
 
 ### [1.2.4] - 2017-05-02
