@@ -8,20 +8,20 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              http://win211.org
+ * @link              http://wa211.org
  * @since             1.0.0
  * @package           Win211_Search_Plugin
  *
  * @wordpress-plugin
- * Plugin Name:       WIN211 Search Plugin
- * Plugin URI:        https://github.com/cderenburger/win211-search-plugin
+ * Plugin Name:       WA211 Search Plugin
+ * Plugin URI:        https://github.com/cderenburger/wa211-vl-search-plugin
  * Description:       Allows health and human service websites the ability to add widgets, shortcuts, or links to allow users to search for community resources on search providers utilizing the Resource House API.
- * Version:           1.2.9
+ * Version:           1.3.0
  * Author:            Cory Derenburger
- * Author URI:        http://win211.org
+ * Author URI:        http://wa211.org
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       win211-search-plugin
+ * Text Domain:       wa211-vl-search-plugin
  * Domain Path:       /languages
  */
 
@@ -82,7 +82,7 @@ $updater->initialize();
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0.0
+ * @since    1.0.0.0
  */
 function run_win211_search_plugin() {
 

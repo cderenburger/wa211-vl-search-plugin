@@ -18,7 +18,7 @@ add_shortcode( 'win211search', 'win211search_shortcode' ); */
 
 			// Add Shortcode [win211search] to add html forms to page
 //public function win211search_register_shortcodes(){
-	function win211search_shortcode() {
+	function wa211search_shortcode() {
 			/* buffer form code */
 			ob_start();  
 			?>
@@ -43,7 +43,7 @@ add_shortcode( 'win211search', 'win211search_shortcode' ); */
 	
 		
 		}
-		add_shortcode( 'win211search', 'win211search_shortcode' );
+		add_shortcode( 'wa211search', 'wa211search_shortcode' );
 
 		
 ?>
