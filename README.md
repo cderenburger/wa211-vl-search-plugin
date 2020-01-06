@@ -126,6 +126,11 @@ As of this writing these settings in Washington are as follows:
 
 ## Changelog
 
+### [1.2.9] - 2020-01-04
+#### Updated
+ * Updated code for PHP 7.1 Compatability
+ 
+
 ### [1.2.8.1] - 2018-11-18
 #### Updated
  * Updated incontact email addresses on city lookup to populate contact form
