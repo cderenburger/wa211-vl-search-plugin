@@ -39,18 +39,22 @@ $(document).ready(function(){
 			$("#region").val(ui.item.region);
 			$("#email-211").val(ui.item.email);
 			$("#user-location").val(ui.item.city);
+      $("#zip").val(ui.item.zip);
 			var location =  $("#city").val();
+      var zip =  $("#zip").val();
 			var geocoor = $("#geocoor").val();
 			var region = $("#region").val();
 			var email = $("#email-211").val();
 			var userlocation = $("#user-location").val();
-			var domain = "www.resourcehouse.com/win211" ;
+			var domain1 = "%7B%22service%5C%5Cservice_taxonomy%5C%5Cmodule_servicepost%22%3A%7B%22value%22%3A%5B%7B%22taxonomy_id%22%3A" ;
+			var domain2 = "-ta_id_null%22%7D%5D%2C%22operator%22%3A%5B%22contains_array%22%5D%7D%2C%22site%5C%5Csite_addressus%5C%5Csite_addressus%22%3A%7B%22site%5C%5Csite_addressus%5C%5Csite_addressus%5C%5Czip%22%3A%7B%22value%22%3A%22" ;
+			var domain3 = "%22%2C%22operator%22%3A%5B%22orderbyasc%22%5D%7D%7D%2C%22agency%5C%5Cagency_system%5C%5Cname%22%3A%7B%22value%22%3A%22%22%2C%22operator%22%3A%5B%22notequals%22%5D%7D%7D?" ;
 			var geoloc = "&loc=";
 			var amp = "&".replace(/#038;/g,"");
 		console.log(location);
-			$("a[href^='https://www.resourcehouse.info/win211/Search?q=']").not("a[href^='https://www.resourcehouse.info/win211/CHANGEME']")
+			$("a[href^='https://wa211.communityos.org/searchresults/render/ds/']").not("a[href^='https://wa211.communityos.org/searchresults/render/ds/CHANGEME']")
 			.each(function(){
-			this.href = "https://www.resourcehouse.info/win211/Search?q=" + $(this).attr('data-relativeurl')+amp+"loc="+location+amp+"geo="+geocoor+amp+"reg="+region+amp+"o=distance-asc";
+			this.href = "https://wa211.communityos.org/searchresults/render/ds/" +domain1 + $(this).attr('data-relativeurl') + "%2C%22__react_key%22%3A%22ta_id_" + $(this).attr('data-relativeurl') + domain2 + zip + domain3;
 			});
 			$("a[href^='https://www.resourcehouse.info/win211/Search/Topics/']").not("a[href^='https://www.resourcehouse.info/win211/CHANGEME']")
 			.each(function(){
