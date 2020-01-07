@@ -55,6 +55,10 @@ The ```data-relativeurl=``` restates the ````tax_id````.  When a location is sel
 
 ## Changelog
 
+### [1.3.1] - 2020-01-06
+#### Updated
+ * Updated cities table for VL zipcode
+
 ### [1.2.9] - 2020-01-04
 #### Updated
  * Updated code for PHP 7.1 Compatability
