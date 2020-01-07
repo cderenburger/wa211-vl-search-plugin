@@ -80,7 +80,7 @@ $(document).ready(function(){
 	//	minLength:1
 //	};
 		$("#city").autocomplete(ac_cities);
-		$("#taxname").autocomplete(ac_keyword);
+	//	$("#taxname").autocomplete(ac_keyword);
 });
 
 })( jQuery );
