@@ -3,16 +3,10 @@
  * included in this file.
  */
  
- #geocoor {
-     display: none;
-     
- }
- #region {
-     display: none;
- }
-#email-211 {
-     display: none !important;
+
+#zip {
+  display: none !important;  
 }
-#user-location {
-     display: none !important;
+#211-keyword {
+  display: none !important
 }

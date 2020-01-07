@@ -55,6 +55,10 @@ The ```data-relativeurl=``` restates the ````tax_id````.  When a location is sel
 
 ## Changelog
 
+### [1.3.2] - 2020-01-06
+#### Updated
+ * fixed css and cleanup
+
 ### [1.3.1.1] - 2020-01-06
 #### Updated
  * Updated cities table for VL zipcode
