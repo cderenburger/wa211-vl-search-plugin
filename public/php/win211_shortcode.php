@@ -25,7 +25,7 @@ add_shortcode( 'win211search', 'win211search_shortcode' ); */
 			
 			<form id="211-keyword" name="211-keyword" <?php echo 'action="' . plugin_dir_url( __FILE__ ) . '211search_keyprocess.php' .'" ' ; ?> method="post" target="_new" method="get"/>
         <p><input type="text" name="city" id="city" value="" placeholder="Location" /></p>
-				<input type="text" name="zip" id="zip" value=""/><br/>
+				<input type="text" name="zip" id="zip" value=""/>
 			</form>
 			
 			<?php
